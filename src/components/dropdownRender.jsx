@@ -1,5 +1,5 @@
 import React from 'react'
-import {Label,Col} from 'reactstrap'
+import {Label,Col,Input,FormGroup} from 'reactstrap'
 
 const agama =[
     'Islam',
@@ -19,26 +19,26 @@ const tinggal =[
 ]
 
 export const Agama = ({ label,input, meta: { touched, error } }) => (
-    <div>
+    <FormGroup>
         <Label sm={2} md={12}>{label}</Label>
         <Col sm={10} md={12}>
-        <select {...input}>
-            <option value="">Agama...</option>
+        <Input type="select" {...input}>
+            <option value="">Agama</option>
             {agama.map(val => <option value={val} key={val}>{val}</option>)}
-        </select>
+        </Input>
         {touched && error && <span className="errorStyle">{error}</span>}
         </Col>
-    </div>
+    </FormGroup>
 );
 
 export const Tinggal = ({ label,input, meta: { touched, error } }) => (
     <div>
         <Label sm={2} md={12}>{label}</Label>
         <Col sm={10} md={12}>
-        <select {...input}>
-            <option value="">Tempat Tinggal</option>
+        <Input type="select" {...input}>
+            <option value="">Tinggal Di</option>
             {tinggal.map(val => <option value={val} key={val}>{val}</option>)}
-        </select>
+        </Input>
         {touched && error && <span className="errorStyle">{error}</span>}
         </Col>
     </div>

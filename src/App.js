@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import {Route,Switch,Router} from 'react-router-dom'
 import history from './history'
 import DaftarHome from './components/DaftarHome'
 import InstitutionHome from './components/institutionForm/InstitutionHome'
-import PersonalHome from './components/personalForm/PersonalHome'
+import PersonalHome from './components/personalForm/wizard'
 import confirmPage from './components/institutionForm/ConfirmPage'
 import confirmPageUser from './components/personalForm/ConfirmPageUser'
 class App extends Component {
